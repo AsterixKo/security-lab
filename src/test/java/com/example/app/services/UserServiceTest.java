@@ -25,17 +25,17 @@ public class UserServiceTest {
     @BeforeEach
     public void setUp() {
         user = new User();
-        user.setUsername("testing");
+        user.setUsername("testing_admin");
         user.setPassword("1234");
         System.out.println("El usuario inicial es: " + user);
 
         userService.saveUser(user);
     }
 
-    @AfterEach
-    public void tearDown() {
-        userRepository.delete(user);
-    }
+//    @AfterEach
+//    public void tearDown() {
+//        userRepository.delete(user);
+//    }
 
     @Test
     @DisplayName("La encriptación de passwords es correcta")
